@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="day">DAY</label>
+          <input type="number" id="day" name="day" placeholder="DD" min="1" max="31" value="22">
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label for="month">MONTH</label>
+          <input type="number" id="month" name="month" placeholder="MM" min="1" max="12" value="3" />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label for="year">YEAR</label>
+          <input type="number" id="year" name="year" placeholder="YYYY" min="1000" max="9999" value="2001">
+          <small></small>
+        </div>
+        <hr>
+        <button type="button" onclick="calcAge()"><img src="./assets/images/icon-arrow.svg" alt="icon-arrow"></button>
+      </form>
+      <div class="age-section">
+        <p><span>--</span> Years</p>
+        <p><span>--</span> Months</p>
+        <p><span>--</span> Days</p>
+      </div>
+
+    </div>
+  </main>
+  <footer class="attribution">
+    Coded by <a href="https://github.com/AMM48?tab=repositories">Abdulrahman Almehdar</a>
+  </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

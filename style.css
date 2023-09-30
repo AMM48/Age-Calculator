@@ -1,0 +1,235 @@
+
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Bold.ttf') ('./assets/fonts/Poppins-Italic.ttf') format('truetype'); /* Legacy Browsers */
+    font-style: normal;
+  }
+
+  :root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: 0, 1%, 44%;
+    --off-black: hsl(0, 0%, 8%);
+  }
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;   
+    font-family: 'Poppins', sans-serif;     
+    /* font-weight: bold;                                   */
+}
+
+html{
+    /* color-scheme: dark light; */
+    font-size: 62.5%;
+}
+
+main{
+    background-color: var(--off-white);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background-color: var(--white);
+    width: 50%;
+    height: 55vh;
+    border-radius: 2rem;
+    border-bottom-right-radius: 18rem;
+    padding: 4rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 0.7fr 0.7fr 0.7fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    /* gap: 0.5rem; */
+}
+
+label {
+    color: hsl(var(--smokey-grey));
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.2rem;
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 80%;
+    border: 1px solid var(--light-grey);
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: hsl(var(--off-black), 0.8);
+}
+
+input::placeholder {
+    color: hsl(var(--smokey-grey), 0.8);
+}
+
+input:focus {
+    outline: 1.5px solid var(--purple);
+}
+
+button {
+    display: grid;
+    place-content: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--purple);
+    color: var(--off-white);
+    grid-column: 4;
+    grid-row: 2;
+    justify-self: center;
+    transition: all 0.15s ease-in;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--off-black);
+}
+
+hr {
+    grid-column: 1 / 5;
+    width: 90%;
+    grid-row: 2;
+    align-self: center;
+    height: 0.5px;
+    border: 0px solid var(--light-grey);
+    background-color: var(--light-grey);
+}
+
+.age-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-section * {
+    font-style: italic;
+    font-size: 9.5rem;
+    color: var(--off-black);
+    font-weight: bold;
+    height: 10vh;
+}
+
+.age-section span {
+    color: var(--purple);
+
+}
+
+small {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: var(--light-red);
+}
+
+footer {
+    color: hsl(0, 0%, 8%);
+}
+
+@media (max-width: 391px) {
+
+    main{
+        display: grid;
+        place-content: center;
+        overflow: hidden;
+    }
+
+    .container{
+        height: 55vh;
+        width: 90%;
+        margin-bottom: 20rem;
+        padding: 5rem 2rem 2rem 2rem;
+        border-bottom-right-radius: 10rem;
+    }
+
+    .age-section * {
+        font-size: 4.5rem;
+    }
+
+    .age-section{
+        margin-top: 2rem;
+        height: 0vh;
+    }
+
+    button {
+        width: 6rem;
+        height: 6rem;
+        grid-column: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 45%;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    form {
+        row-gap: 3rem;
+        grid-template-columns: 0.7fr 0.7fr 0.7fr;
+    }
+
+    input {
+        width: 85%;
+        padding:1rem;
+        font-size: 2rem;
+    }
+
+    label {
+    font-size: 1.2rem;
+    }
+
+    button:hover {
+        background-color: var(--purple);
+    }
+    small {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1080px){
+    .age-section * {
+        font-size: 8.5rem;
+    }
+    .age-section *:nth-child(-n+2){
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        height: 70vh;
+    }
+
+}
