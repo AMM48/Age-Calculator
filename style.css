@@ -46,8 +46,8 @@ main{
 
 .container {
     background-color: var(--white);
-    width: 50%;
-    height: 55vh;
+    width: 56%;
+    height:75vh;
     border-radius: 2rem;
     border-bottom-right-radius: 18rem;
     padding: 4rem;
@@ -132,7 +132,7 @@ hr {
     font-size: 9.5rem;
     color: var(--off-black);
     font-weight: 800;
-    height: 10vh;
+    height: 12vh;
 }
 
 .age-section span {
@@ -215,22 +215,16 @@ footer {
     }
 }
 
-@media (min-width: 1080px){
+@media (min-width: 1440px) {
     .age-section * {
-        font-size: 8.5rem;
+        font-size: 9rem;
+    height: 9vh;
     }
     .age-section *:nth-child(-n+2){
         margin-bottom: 2rem;
     }
-
     .container {
-        height: 78vh;
+        height: 70vh;
+        width: 50%;
     }
-
-    @media (min-width: 1440px) {
-        .container {
-            height: 58vh;
-        }
-    }
-
 }
